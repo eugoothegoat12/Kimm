@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Simple Website</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            background: linear-gradient(135deg, #e0f7fa 0%, #f5f5f5 100%);
+            min-height: 100vh;
+        }
+        header { 
+            background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+            color: white; 
+            padding: 40px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(44, 62, 80, 0.08);
+        }
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        nav {
+            margin: 25px 0;
+            text-align: center;
+        }
+        nav a {
+            display: inline-block;
+            margin: 0 18px;
+            padding: 10px 28px;
+            text-decoration: none;
+            color: #43e97b;
+            background: #fff;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(67, 233, 123, 0.08);
+            border: 2px solid #43e97b;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            background: #43e97b;
+            color: #fff;
+            transform: translateY(-2px) scale(1.04);
+            box-shadow: 0 4px 16px rgba(67, 233, 123, 0.18);
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+            max-width: 900px;
+        }
+        section {
+            background: white;
+            padding: 30px 28px;
+            border-radius: 14px;
+            margin-bottom: 30px;
+            min-width: 260px;
+            flex: 1 1 280px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.10);
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+        section:hover {
+            box-shadow: 0 8px 32px rgba(67, 233, 123, 0.15);
+            transform: translateY(-4px) scale(1.015);
+        }
+        section h2 {
+            color: #43e97b;
+            margin-top: 0;
+            letter-spacing: 1px;
+        }
+        footer {
+            margin-top: 40px;
+            padding: 18px 0;
+            text-align: center;
+            color: #777;
+            background: #fff;
+            border-top: 1px solid #e0f7fa;
+            font-size: 1rem;
+            box-shadow: 0 -2px 12px rgba(44, 62, 80, 0.03);
+        }
+        /* Responsive */
+        @media (max-width: 700px) {
+            main {
+                flex-direction: column;
+                gap: 0;
+                max-width: 100%;
+            }
+            section {
+                margin-bottom: 20px;
+                min-width: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website!</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>This is a simple website built with HTML. You can use this as a starting point for your own project!</p>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>Hi! I'm a web developer learning HTML and web design.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: example@example.com</p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 My Simple Website. All rights reserved.
+    </footer>
+</body>
+</html>
