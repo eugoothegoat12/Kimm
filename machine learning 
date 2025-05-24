@@ -23,3 +23,26 @@ y_pred = clf.predict(X_test)
 # Calculate accuracy
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy:.2f}")
+
+
+import numpy as np
+
+# Generate some example data (y = 2x + 1 + noise)
+np.random.seed(0)
+X = 2 * np.random.rand(100, 1)
+y = 2 * X + 1 + np.random.randn(100, 1) * 0.2
+
+# Add a column of ones to X for the bias term (intercept)
+X_b = np.c_[np.ones((100, 1)), X]
+
+# Calculate the best fit parameters using the Normal Equation
+theta_best = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y)
+
+print(f"Intercept (bias): {theta_best[0][0]:.2f}")
+print(f"Slope (weight): {theta_best[1][0]:.2f}")
+
+# Predict values
+X_new = np.array([[0], [2]])
+X_new_b = np.c_[np.ones((2, 1)), X_new]
+y_predict = X_new_b.dot(theta_best)
+print("Prediction for X = 0 and X = 2:", y_predict.ravel())
